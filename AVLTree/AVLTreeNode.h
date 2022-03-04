@@ -88,7 +88,7 @@ AVLTree Insert(ElementType val, AVLTree AVLT) {
         // Judge whether the tree should rotate or not
         if(abs(AVLT->left->height - AVLT->right->height) > 1) {
             if (val > AVLT->right->data) AVLT = LeftRotation(AVLT);
-            else AVLT = RightLeftRotation(AVLT)
+            else AVLT = RightLeftRotation(AVLT);
         }
     }
 }
