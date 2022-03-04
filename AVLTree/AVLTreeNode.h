@@ -4,7 +4,10 @@
 
 #ifndef TREE_AVLTREENODE_H
 #define TREE_AVLTREENODE_H
+
 #include <stdio.h>
+#include <stdlib.h>
+
 typedef int ElementType;
 typedef struct AVLNode *Position;
 typedef Position AVLTree;
@@ -60,8 +63,34 @@ AVLTree RightLeftRotation(AVLTree AVLT) {
 }
 
 AVLTree Insert(ElementType val, AVLTree AVLT) {
-    if (val < AVLT->data) AVLT->left = Insert(val ,AVLT->left);
-//    if
+    if (!AVLT) {
+        AVLT = (AVLTree) malloc(sizeof(struct AVLNode *));
+        AVLT->data = val;
+        AVLT->left = AVLT->right = NULL;
+        AVLT->height = 0;
+    }
+
+    // Insert val to the left son trees
+    if (val < AVLT->data) {
+        AVLT->left = Insert(val, AVLT->left);
+
+        // Judge whether the tree should rotate or not
+        if (abs(AVLT->left->height - AVLT->right->height) > 1) {
+            if(val < AVLT->left->data) AVLT = RightRotation(AVLT);
+            else AVLT = LeftRightRotation(AVLT);
+        }
+    }
+
+    // Insert val to the right son tree
+    if (val > AVLT->data) {
+        AVLT->right = Insert(val, AVLT->right);
+
+        // Judge whether the tree should rotate or not
+        if(abs(AVLT->left->height - AVLT->right->height) > 1) {
+            if (val > AVLT->right->data) AVLT = LeftRotation(AVLT);
+            else AVLT = RightLeftRotation(AVLT)
+        }
+    }
 }
 
 #endif //TREE_AVLTREENODE_H
