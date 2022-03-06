@@ -67,6 +67,36 @@ build CMakeFiles/Tree.dir/main.c.obj: C_COMPILER__Tree_Debug C$:/Users/MSI-NB/CL
   OBJECT_DIR = CMakeFiles\Tree.dir
   OBJECT_FILE_DIR = CMakeFiles\Tree.dir
 
+build CMakeFiles/Tree.dir/AVLTree/AVLTreeNode.c.obj: C_COMPILER__Tree_Debug C$:/Users/MSI-NB/CLionProjects/Tree/AVLTree/AVLTreeNode.c || cmake_object_order_depends_target_Tree
+  DEP_FILE = CMakeFiles\Tree.dir\AVLTree\AVLTreeNode.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\Tree.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tree.dir\AVLTree
+
+build CMakeFiles/Tree.dir/BinaryTree/Queue.c.obj: C_COMPILER__Tree_Debug C$:/Users/MSI-NB/CLionProjects/Tree/BinaryTree/Queue.c || cmake_object_order_depends_target_Tree
+  DEP_FILE = CMakeFiles\Tree.dir\BinaryTree\Queue.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\Tree.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tree.dir\BinaryTree
+
+build CMakeFiles/Tree.dir/BinaryTree/Stack.c.obj: C_COMPILER__Tree_Debug C$:/Users/MSI-NB/CLionProjects/Tree/BinaryTree/Stack.c || cmake_object_order_depends_target_Tree
+  DEP_FILE = CMakeFiles\Tree.dir\BinaryTree\Stack.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\Tree.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tree.dir\BinaryTree
+
+build CMakeFiles/Tree.dir/BinaryTree/BSTopts.c.obj: C_COMPILER__Tree_Debug C$:/Users/MSI-NB/CLionProjects/Tree/BinaryTree/BSTopts.c || cmake_object_order_depends_target_Tree
+  DEP_FILE = CMakeFiles\Tree.dir\BinaryTree\BSTopts.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\Tree.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tree.dir\BinaryTree
+
+build CMakeFiles/Tree.dir/BinaryTree/BTopts.c.obj: C_COMPILER__Tree_Debug C$:/Users/MSI-NB/CLionProjects/Tree/BinaryTree/BTopts.c || cmake_object_order_depends_target_Tree
+  DEP_FILE = CMakeFiles\Tree.dir\BinaryTree\BTopts.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\Tree.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tree.dir\BinaryTree
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Tree
@@ -75,7 +105,7 @@ build CMakeFiles/Tree.dir/main.c.obj: C_COMPILER__Tree_Debug C$:/Users/MSI-NB/CL
 #############################################
 # Link the executable Tree.exe
 
-build Tree.exe: C_EXECUTABLE_LINKER__Tree_Debug CMakeFiles/Tree.dir/main.c.obj
+build Tree.exe: C_EXECUTABLE_LINKER__Tree_Debug CMakeFiles/Tree.dir/main.c.obj CMakeFiles/Tree.dir/AVLTree/AVLTreeNode.c.obj CMakeFiles/Tree.dir/BinaryTree/Queue.c.obj CMakeFiles/Tree.dir/BinaryTree/Stack.c.obj CMakeFiles/Tree.dir/BinaryTree/BSTopts.c.obj CMakeFiles/Tree.dir/BinaryTree/BTopts.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Tree.dir

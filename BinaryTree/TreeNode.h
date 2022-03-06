@@ -23,7 +23,6 @@ typedef struct TreeNode *BinTree;
 typedef BinTree Position;
 struct TreeNode {
     ElementType Data;
-//    int Data;
     BinTree Left;
     BinTree Right;
 };
