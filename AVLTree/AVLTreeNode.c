@@ -49,7 +49,7 @@ AVLTree RightLeftRotation(AVLTree AVLT) {
     return LeftRotation(AVLT);
 }
 
-AVLTree Insert(ElementType val, AVLTree AVLT) {
+AVLTree AVLInsert(ElementType val, AVLTree AVLT) {
     if (!AVLT) {
         AVLT = (AVLTree) malloc(sizeof(struct AVLNode *));
         AVLT->data = val;
@@ -57,9 +57,9 @@ AVLTree Insert(ElementType val, AVLTree AVLT) {
         AVLT->height = 0;
     }
 
-        // Insert val to the left son trees
+        // AVLInsert val to the left son trees
     else if (val < AVLT->data) {
-        AVLT->left = Insert(val, AVLT->left);
+        AVLT->left = AVLInsert(val, AVLT->left);
         AVLT->height = max(GetHeight(AVLT->left), GetHeight(AVLT->right)) + 1;
 
         // Judge whether the tree should rotate or not
@@ -69,9 +69,9 @@ AVLTree Insert(ElementType val, AVLTree AVLT) {
         }
     }
 
-        // Insert val to the right son tree
+        // AVLInsert val to the right son tree
     else if (val > AVLT->data) {
-        AVLT->right = Insert(val, AVLT->right);
+        AVLT->right = AVLInsert(val, AVLT->right);
         AVLT->height = max(GetHeight(AVLT->left), GetHeight(AVLT->right)) + 1;
 
         // Judge whether the tree should rotate or not

@@ -4,3 +4,13 @@
 3	786	6682382425235148	CMakeFiles/Tree.dir/main.c.obj	f259cbd8599549a1
 834	1590	6682382434125967	Tree.exe	791e25eacb1e6830
 172	834	6682382426601552	CMakeFiles/Tree.dir/AVLTree/AVLTreeNode.c.obj	ad3b6e68dfd7761e
+2	824	6682389874887870	CMakeFiles/Tree.dir/BinaryTree/Queue.c.obj	2f0eaf460d52703
+182	827	6682389875984931	CMakeFiles/Tree.dir/BinaryTree/BTopts.c.obj	316e66795dd64a9d
+167	837	6682389876124557	CMakeFiles/Tree.dir/BinaryTree/BSTopts.c.obj	2a55c9af1e3c07e9
+322	854	6682389876304085	CMakeFiles/Tree.dir/BinaryTree/Stack.c.obj	f61e1a2d1552e0dc
+2	694	6682391501295362	CMakeFiles/Tree.dir/main.c.obj	f259cbd8599549a1
+175	696	6682391501504813	CMakeFiles/Tree.dir/BinaryTree/BTopts.c.obj	316e66795dd64a9d
+189	737	6682391501883783	CMakeFiles/Tree.dir/BinaryTree/Queue.c.obj	2f0eaf460d52703
+485	751	6682391502113170	CMakeFiles/Tree.dir/AVLTree/AVLTreeNode.c.obj	ad3b6e68dfd7761e
+609	780	6682391502402404	CMakeFiles/Tree.dir/BinaryTree/BSTopts.c.obj	2a55c9af1e3c07e9
+781	1361	6682391508174708	Tree.exe	fe746d99de218b0c

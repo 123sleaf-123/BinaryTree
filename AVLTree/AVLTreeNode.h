@@ -30,7 +30,7 @@ AVLTree LeftRightRotation(AVLTree AVLT);
 
 AVLTree RightLeftRotation(AVLTree AVLT);
 
-AVLTree Insert(ElementType val, AVLTree AVLT);
+AVLTree AVLInsert(ElementType val, AVLTree AVLT);
 
 AVLTree Delete(ElementType val, AVLTree AVLT);
 

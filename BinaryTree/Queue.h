@@ -32,7 +32,7 @@ Queue CreateQueue();
 int IsFullQue(Queue Q);
 
 // void AddQ(Queue Q, ElementType item);
-// Insert element data item into the Queue.
+// AVLInsert element data item into the Queue.
 void AddQ(Queue Q, BinTree BT);
 
 // Judge whether Queue Q is empty or not.

@@ -9,7 +9,7 @@ int main() {
         case 0: {
             AVLTree T;
             for (int i = 0; i < 10; ++i) {
-                T = Insert((9 - i), T);
+                T = AVLInsert((9 - i), T);
             }
             break;
         }

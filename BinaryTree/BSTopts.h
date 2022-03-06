@@ -19,7 +19,7 @@ Position FindMax(BinTree BST);
 // Find the pos of minimum element in BST
 Position FindMin(BinTree BST);
 
-// Insert a new element to a BST
+// AVLInsert a new element to a BST
 BinTree Insert(ElementType X, BinTree BST);
 
 // Delete an existing element from a BST
