@@ -32,6 +32,6 @@ AVLTree RightLeftRotation(AVLTree AVLT);
 
 AVLTree AVLInsert(ElementType val, AVLTree AVLT);
 
-AVLTree Delete(ElementType val, AVLTree AVLT);
+AVLTree AVLDelete(ElementType val, AVLTree AVLT);
 
 #endif //TREE_AVLTREENODE_H
