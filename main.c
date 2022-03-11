@@ -19,12 +19,16 @@ int main() {
 
         case 1:
         {
-            MaxHeap H = CreateHeap(3);
-            for (int j = 0; j < 5; ++j) {
+            MaxHeap H = CreateHeap(10);
+            for (int j = 0; j < H->capacity; ++j) {
                 HeapInsert(j, H);
             }
-            for (int j = 0; j < 3; ++j) {
-                HeapDelete((2 - j), H);
+            for (int j = 0; j < H->size; ++j) {
+                for (int k = 1; k < H->size; ++k) {
+                    printf("%d ", H->elements[k]);
+                }
+                printf("\n");
+                DeleteMax(H);
             }
             break;
         }

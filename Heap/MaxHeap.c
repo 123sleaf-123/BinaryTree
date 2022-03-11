@@ -11,6 +11,13 @@ int IsFull(MaxHeap MH) {
     return 0;
 }
 
+int IsEmpty(MaxHeap MH) {
+    if (MH != NULL)
+        if (MH->size != 0) return 0;
+    return 1;
+}
+
+
 MaxHeap CreateHeap(int maxSize) {
     MaxHeap MH = (MaxHeap) malloc(sizeof(struct HeapStruct *));
 
@@ -43,19 +50,25 @@ void HeapInsert(ElementType val, MaxHeap MH) {
 //    Author comment: 这数组二叉树浓眉大眼的，没想到还挺tm方便
 }
 
-ElementType HeapDelete(ElementType val, MaxHeap MH) {
-//    Find the element to be deleted
-    int i = MH->size;
-    for (; MH->elements[i] != val; i--) {
-        if (i == 0) {
-            printf("Element doesn't exist.");
-            return 0;
-        }
+ElementType DeleteMax(MaxHeap MH) {
+    if (IsEmpty(MH)) {
+        printf("Max heap has been empty. Deletion failed.");
+        return -1;
     }
 
-//    Change the structure to encounter the features of max heap
-    for (int j = 0; j <= MH->size; ++j) {
-        j = (MH->elements[i / 2] > MH->elements[i / 2 + 1]) ? (i / 2) : (i / 2 + 1);
+    ElementType max = MH->elements[1];
+    int i = 1;
+    int j = 1;
+
+    while (j <= MH->size) {
+        if (i * 2 > MH->size) break;
+        else if ((i * 2 + 1) > MH->size) j = i * 2;
+        else j = (MH->elements[i * 2] > MH->elements[i * 2 + 1]) ? (i * 2) : (i * 2 + 1);
         if (j != 0) MH->elements[i] = MH->elements[j];
+        i = j;
     }
+
+    MH->size--;
+
+    return max;
 }

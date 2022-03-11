@@ -13,6 +13,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 //#include "../AVLTree/AVLTreeNode.h"
 #define ElementType int
 typedef struct HeapStruct *MaxHeap;
@@ -24,13 +25,15 @@ struct HeapStruct {
 
 int IsFull(MaxHeap MH);
 
+int IsEmpty(MaxHeap MH);
+
 // Create a new max heap
 MaxHeap CreateHeap(int maxSize);
 
 // Insert a new element into the max heap
 void HeapInsert(ElementType val, MaxHeap MH);
 
-// Delete an existing element from the max heap in recurrent way
-ElementType HeapDelete(ElementType val, MaxHeap MH);
+// Delete the maximum element from the max heap in recurrent way
+ElementType DeleteMax(MaxHeap MH);
 
 #endif //TREE_MAXHEAP_H
