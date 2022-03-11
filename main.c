@@ -2,6 +2,7 @@
 //#include "BinaryTree/BTopts.h"
 #include "AVLTree/AVLTreeNode.h"
 #include "Heap/MaxHeap.h"
+#include "print.h"
 
 int main() {
     printf("Hello, World!\n");
@@ -24,10 +25,7 @@ int main() {
                 HeapInsert(j, H);
             }
             for (int j = 0; j < H->size; ++j) {
-                for (int k = 1; k < H->size; ++k) {
-                    printf("%d ", H->elements[k]);
-                }
-                printf("\n");
+                printI(H->elements, H->size, 1);
                 DeleteMax(H);
             }
             break;
