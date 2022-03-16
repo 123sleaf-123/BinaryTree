@@ -26,9 +26,9 @@ struct HeapStruct {
     char type;
 };
 
-int IsFull(Heap MH);
+int IsFull(Heap H);
 
-int IsEmpty(Heap MH);
+int IsEmpty(Heap H);
 
 // Create a new max heap
 MaxHeap CreateMaxHeap(int maxSize);

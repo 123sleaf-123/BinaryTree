@@ -1,6 +1,6 @@
 # ninja log v5
 31	657	6686724115795109	CMakeFiles/Tree.dir/Heap/Heap.c.obj	c268e27703342822
-3	597	6691036997757292	build.ninja	801e2139f2fe40fe
+3	597	6691077949190590	build.ninja	801e2139f2fe40fe
 2	599	6675626229335871	CMakeFiles/BinaryTree.dir/main.c.obj	7a6ea4804d512b92
 3	620	6686724114600319	CMakeFiles/Tree.dir/main.c.obj	f259cbd8599549a1
 322	854	6682389876304085	CMakeFiles/Tree.dir/BinaryTree/Stack.c.obj	f61e1a2d1552e0dc

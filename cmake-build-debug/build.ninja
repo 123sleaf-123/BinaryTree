@@ -109,6 +109,18 @@ build CMakeFiles/Tree.dir/print.c.obj: C_COMPILER__Tree_Debug C$:/Users/MSI-NB/C
   OBJECT_DIR = CMakeFiles\Tree.dir
   OBJECT_FILE_DIR = CMakeFiles\Tree.dir
 
+build CMakeFiles/Tree.dir/HuffmanTree/HuffmanTree.c.obj: C_COMPILER__Tree_Debug C$:/Users/MSI-NB/CLionProjects/Tree/HuffmanTree/HuffmanTree.c || cmake_object_order_depends_target_Tree
+  DEP_FILE = CMakeFiles\Tree.dir\HuffmanTree\HuffmanTree.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\Tree.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tree.dir\HuffmanTree
+
+build CMakeFiles/Tree.dir/HuffmanTree/HeapForHuffmanTree.c.obj: C_COMPILER__Tree_Debug C$:/Users/MSI-NB/CLionProjects/Tree/HuffmanTree/HeapForHuffmanTree.c || cmake_object_order_depends_target_Tree
+  DEP_FILE = CMakeFiles\Tree.dir\HuffmanTree\HeapForHuffmanTree.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\Tree.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tree.dir\HuffmanTree
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Tree
@@ -117,7 +129,7 @@ build CMakeFiles/Tree.dir/print.c.obj: C_COMPILER__Tree_Debug C$:/Users/MSI-NB/C
 #############################################
 # Link the executable Tree.exe
 
-build Tree.exe: C_EXECUTABLE_LINKER__Tree_Debug CMakeFiles/Tree.dir/main.c.obj CMakeFiles/Tree.dir/AVLTree/AVLTreeNode.c.obj CMakeFiles/Tree.dir/BinaryTree/Queue.c.obj CMakeFiles/Tree.dir/BinaryTree/Stack.c.obj CMakeFiles/Tree.dir/BinaryTree/BSTopts.c.obj CMakeFiles/Tree.dir/BinaryTree/BTopts.c.obj CMakeFiles/Tree.dir/Heap/Heap.c.obj CMakeFiles/Tree.dir/print.c.obj
+build Tree.exe: C_EXECUTABLE_LINKER__Tree_Debug CMakeFiles/Tree.dir/main.c.obj CMakeFiles/Tree.dir/AVLTree/AVLTreeNode.c.obj CMakeFiles/Tree.dir/BinaryTree/Queue.c.obj CMakeFiles/Tree.dir/BinaryTree/Stack.c.obj CMakeFiles/Tree.dir/BinaryTree/BSTopts.c.obj CMakeFiles/Tree.dir/BinaryTree/BTopts.c.obj CMakeFiles/Tree.dir/Heap/Heap.c.obj CMakeFiles/Tree.dir/print.c.obj CMakeFiles/Tree.dir/HuffmanTree/HuffmanTree.c.obj CMakeFiles/Tree.dir/HuffmanTree/HeapForHuffmanTree.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Tree.dir
