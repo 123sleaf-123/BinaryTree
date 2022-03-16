@@ -8,32 +8,44 @@
  * 有序性：任意结点的关键字是其子树所有节点的最大值（或者最小值）
  * */
 
-#ifndef TREE_MAXHEAP_H
-#define TREE_MAXHEAP_H
+#ifndef TREE_HEAP_H
+#define TREE_HEAP_H
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-//#include "../AVLTree/AVLTreeNode.h"
+
 #define ElementType int
+typedef struct HeapStruct *Heap;
 typedef struct HeapStruct *MaxHeap;
+typedef struct HeapStruct *MinHeap;
 struct HeapStruct {
     ElementType *elements;  // The array to store the elements
     int size;  // The number of elements stored in the heap
     int capacity;  // The maximum capacity of the heap
+    char type;
 };
 
-int IsFull(MaxHeap MH);
+int IsFull(Heap MH);
 
-int IsEmpty(MaxHeap MH);
+int IsEmpty(Heap MH);
 
 // Create a new max heap
-MaxHeap CreateHeap(int maxSize);
+MaxHeap CreateMaxHeap(int maxSize);
 
 // Insert a new element into the max heap
-void HeapInsert(ElementType val, MaxHeap MH);
+void MaxHeapInsert(ElementType val, MaxHeap MH);
 
 // Delete the maximum element from the max heap in recurrent way
 ElementType DeleteMax(MaxHeap MH);
 
-#endif //TREE_MAXHEAP_H
+// Create a new minimum heap
+MinHeap CreateMinHeap(int maxSize);
+
+// Insert a new element into the minimum heap
+void MinHeapInsert(ElementType val, MinHeap MH);
+
+// Delete the maximum element from the max heap in recurrent way
+ElementType DeleteMin(MinHeap MH);
+
+#endif //TREE_HEAP_H

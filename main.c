@@ -1,7 +1,7 @@
 #include <stdio.h>
 //#include "BinaryTree/BTopts.h"
 #include "AVLTree/AVLTreeNode.h"
-#include "Heap/MaxHeap.h"
+#include "Heap/Heap.h"
 #include "print.h"
 
 int main() {
@@ -20,9 +20,9 @@ int main() {
 
         case 1:
         {
-            MaxHeap H = CreateHeap(10);
+            Heap H = CreateMaxHeap(10);
             for (int j = 0; j < H->capacity; ++j) {
-                HeapInsert(j, H);
+                MaxHeapInsert(j, H);
             }
             for (int j = 0; j < H->size; ++j) {
                 printI(H->elements, H->size, 1);
