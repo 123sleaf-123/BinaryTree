@@ -3,21 +3,24 @@
 //
 
 #include "HeapForHuffmanTree.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
-int IsFull(Heap MH) {
+int IsFullH(Heap MH) {
     if (MH) {
         if (MH->capacity == MH->size) return 1;
     }
     return 0;
 }
 
-int IsEmpty(Heap MH) {
+int IsEmptyH(Heap MH) {
     if (MH != NULL)
         if (MH->size != 0) return 0;
     return 1;
 }
 
-MinHeap CreateMinHeap(int maxSize) {
+MinHeap CreateMinHeapH(int maxSize) {
     MinHeap MH = (MinHeap) malloc(sizeof(struct HeapStruct *));
 
 //  Since the heap will store its elements since the subscript 1, therefore we need one more space
@@ -34,8 +37,8 @@ MinHeap CreateMinHeap(int maxSize) {
     return MH;
 }
 
-void MinHeapInsert(ElementType HT, MinHeap MH) {
-    if (IsFull(MH)) {
+void MinHeapInsertH(ElementType HT, MinHeap MH) {
+    if (IsFullH(MH)) {
         printf("Minimum heap has been full. Insertion failed.");
         return;
     }
@@ -52,14 +55,14 @@ void MinHeapInsert(ElementType HT, MinHeap MH) {
 //    Author comment: 这数组二叉树浓眉大眼的，没想到还挺tm方便
 }
 
-ElementType DeleteMin(MinHeap MH) {
-    if (IsEmpty(MH)) {
+ElementType DeleteMinH(MinHeap MH) {
+    if (IsEmptyH(MH)) {
         printf("Minumum heap has been empty. Deletion failed.");
-        return -1;
+        return NULL;
     }
 
     ElementType min;
-    min->weight = MH->elements[1];
+    min = MH->elements[1];
     int i = 1;
     int j = 1;
 
@@ -79,4 +82,24 @@ ElementType DeleteMin(MinHeap MH) {
     MH->size--;
 
     return min;
+}
+
+HuffmanTree Huffman(MinHeap MH) {
+    HuffmanTree HT;
+    for (int i = 0; i < MH->size; ++i) {
+        HT = (HuffmanTree) malloc(sizeof(struct HTreeNode*));
+
+//        Delete and take out the two Huffman Tree node whose weight is the smallest two
+//        from the given minimum heap.
+//        Then the two nodes become the lef and right child of the targeted Huffman Tree node
+        HT->left = DeleteMinH(MH);
+        HT->right = DeleteMinH(MH);
+
+//        Calculate the sum of children's weights, stores and add the node back to the minimum heap
+        HT->weight = HT->left->weight + HT->right->weight;
+        MinHeapInsertH(HT, MH);
+    }
+
+//    Return the root node as the result
+    return MH->elements[1];
 }

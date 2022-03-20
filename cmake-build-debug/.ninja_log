@@ -1,13 +1,16 @@
 # ninja log v5
-31	657	6686724115795109	CMakeFiles/Tree.dir/Heap/Heap.c.obj	c268e27703342822
-3	597	6691077949190590	build.ninja	801e2139f2fe40fe
+235	1137	6691855788675873	CMakeFiles/Tree.dir/Heap/Heap.c.obj	c268e27703342822
+3	597	6694704144918016	build.ninja	801e2139f2fe40fe
 2	599	6675626229335871	CMakeFiles/BinaryTree.dir/main.c.obj	7a6ea4804d512b92
-3	620	6686724114600319	CMakeFiles/Tree.dir/main.c.obj	f259cbd8599549a1
+4	1098	6691855788237062	CMakeFiles/Tree.dir/main.c.obj	f259cbd8599549a1
 322	854	6682389876304085	CMakeFiles/Tree.dir/BinaryTree/Stack.c.obj	f61e1a2d1552e0dc
-658	1041	6686724119585829	Tree.exe	ef5a36b694689c0a
+645	1238	6691861839529367	Tree.exe	d058a1100c5ebeed
 194	796	6682527615750680	CMakeFiles/Tree.dir/AVLTree/AVLTreeNode.c.obj	ad3b6e68dfd7761e
 189	737	6682391501883783	CMakeFiles/Tree.dir/BinaryTree/Queue.c.obj	2f0eaf460d52703
 175	696	6682391501504813	CMakeFiles/Tree.dir/BinaryTree/BTopts.c.obj	316e66795dd64a9d
 609	780	6682391502402404	CMakeFiles/Tree.dir/BinaryTree/BSTopts.c.obj	2a55c9af1e3c07e9
 182	840	6686688129109705	CMakeFiles/Tree.dir/Heap/MaxHeap.c.obj	db4e4ce5067de909
 16	633	6686724115548193	CMakeFiles/Tree.dir/print.c.obj	18c8dc369147a2ab
+4	811	6691859984993128	CMakeFiles/Tree.dir/HuffmanTree/HuffmanTree.c.obj	c6a3dfe1315631f6
+178	861	6694229836387358	CMakeFiles/Tree.dir/HuffmanTree/HeapForHuffmanTree.c.obj	29172e8025cbf01b
+4	807	6694229835214978	CMakeFiles/Tree.dir/Set/Set.c.obj	22bc33626283b8ae

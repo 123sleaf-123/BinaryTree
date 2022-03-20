@@ -4,10 +4,6 @@
 
 #ifndef TREE_HEAPFORHUFFMANTREE_H
 #define TREE_HEAPFORHUFFMANTREE_H
-
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "HuffmanTree.h"
 
 #define ElementType HuffmanTree
@@ -17,20 +13,21 @@ struct HeapStruct {
     ElementType *elements;  // The array to store the elements
     int size;  // The number of elements stored in the heap
     int capacity;  // The maximum capacity of the heap
-    char type;
 };
 
-int IsFull(Heap MH);
+int IsFullH(Heap MH);
 
-int IsEmpty(Heap MH);
+int IsEmptyH(Heap MH);
 
 // Create a new minimum heap
-MinHeap CreateMinHeap(int maxSize);
+MinHeap CreateMinHeapH(int maxSize);
 
 // Insert a new Huffman Tree node into the minimum heap
-void MinHeapInsert(ElementType val, MinHeap MH);
+void MinHeapInsertH(ElementType val, MinHeap MH);
 
 // Delete the maximum Huffman Tree node from the max heap in recurrent way
-ElementType DeleteMin(MinHeap MH);
+ElementType DeleteMinH(MinHeap MH);
+
+HuffmanTree Huffman(MinHeap MH);
 
 #endif //TREE_HEAPFORHUFFMANTREE_H
